@@ -8,9 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
   <!-- Animated background -->
   <div class="bg-orbs">
     <div class="orb orb-1"></div>
@@ -46,14 +44,31 @@
         <em>Deserves</em> to Feel<br>
         <span class="highlight">Safe.</span>
       </h1>
-
       <p class="hero-subtitle">
         Real-time SOS alerts, trusted contact networks, incident reporting, and community resources — all in one powerful platform.
       </p>
-
       <div class="hero-cta">
         <a href="pages/sos.html" class="btn-sos pulse">🚨 SOS Emergency</a>
         <a href="pages/register.html" class="btn-secondary">Create Account →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>10K+</strong><span>Women Protected</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>500+</strong><span>Incidents Resolved</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>24/7</strong><span>Support Available</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="shield-graphic">
+        <div class="shield-outer">
+          <div class="shield-inner">
+            <div class="shield-core">🛡️</div>
+          </div>
+        </div>
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
       </div>
     </div>
   </section>
@@ -61,64 +76,103 @@
   <!-- Features -->
   <section class="features">
     <div class="section-header">
+      <span class="section-tag">What We Offer</span>
       <h2>Built for Your Protection</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card" data-delay="0">
+        <div class="feature-icon">🚨</div>
+        <h3>SOS Alert</h3>
+        <p>One-tap emergency alert sends your location to trusted contacts and local authorities instantly.</p>
+        <a href="pages/sos.html" class="feature-link">Activate →</a>
+      </div>
+      <div class="feature-card featured" data-delay="100">
+        <div class="feature-badge">Most Used</div>
+        <div class="feature-icon">📍</div>
+        <h3>Live Location Share</h3>
+        <p>Share your real-time location with selected contacts during commutes or late-night outings.</p>
+        <a href="pages/contacts.html" class="feature-link">Set Up →</a>
+      </div>
+      <div class="feature-card" data-delay="200">
+        <div class="feature-icon">📋</div>
+        <h3>Incident Report</h3>
+        <p>Securely report harassment, assault, or unsafe situations with evidence attachments.</p>
+        <a href="pages/report.html" class="feature-link">Report →</a>
+      </div>
+      <div class="feature-card" data-delay="300">
+        <div class="feature-icon">👥</div>
+        <h3>Trusted Circle</h3>
+        <p>Add family and friends to your safety network for instant notifications during emergencies.</p>
+        <a href="pages/contacts.html" class="feature-link">Manage →</a>
+      </div>
+      <div class="feature-card" data-delay="400">
+        <div class="feature-icon">📚</div>
+        <h3>Safety Resources</h3>
+        <p>Access helplines, legal aid, counseling services, and safety tips curated by experts.</p>
+        <a href="pages/resources.html" class="feature-link">Explore →</a>
+      </div>
+      <div class="feature-card" data-delay="500">
+        <div class="feature-icon">🔒</div>
+        <h3>Private & Secure</h3>
+        <p>End-to-end encrypted data. Your privacy is non-negotiable — always protected.</p>
+        <a href="#" class="feature-link">Learn More →</a>
+      </div>
     </div>
   </section>
 
   <!-- Emergency Hotlines -->
   <section class="hotlines">
-    <h2>Emergency Hotlines</h2>
+    <div class="hotlines-inner">
+      <h2>Emergency Hotlines</h2>
+      <p>Immediate help is just a call away</p>
+      <div class="hotlines-grid">
+        <div class="hotline-card">
+          <div class="hotline-num">1091</div>
+          <div class="hotline-label">Women Helpline</div>
+        </div>
+        <div class="hotline-card">
+          <div class="hotline-num">112</div>
+          <div class="hotline-label">Emergency Services</div>
+        </div>
+        <div class="hotline-card">
+          <div class="hotline-num">181</div>
+          <div class="hotline-label">Domestic Violence</div>
+        </div>
+        <div class="hotline-card">
+          <div class="hotline-num">1098</div>
+          <div class="hotline-label">Child Helpline</div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2024 SafeHer</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">SafeHer</span>
+        <p>Empowering women through technology and community.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Platform</h4>
+        <a href="pages/report.html">Report Incident</a>
+        <a href="pages/resources.html">Safety Resources</a>
+        <a href="pages/contacts.html">My Contacts</a>
+        <a href="pages/sos.html">SOS Alert</a>
+      </div>
+      <div class="footer-links">
+        <h4>Account</h4>
+        <a href="pages/login.html">Login</a>
+        <a href="pages/register.html">Register</a>
+        <a href="pages/admin-login.html">Admin Portal</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 SafeHer. All rights reserved. | Made with ❤️ for women's safety.</p>
+    </div>
   </footer>
 
-  <!-- ✅ LOGIN SCRIPT ADDED HERE -->
- <script>
-function loginUser() {
-
-  const email = document.getElementById("email")?.value;
-  const password = document.getElementById("password")?.value;
-
-  fetch("https://womensafety-backend.up.railway.app/api/login/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      email: email,
-      password: password
-    })
-  })
-  .then(async (res) => {
-
-    // IMPORTANT FIX: handle non-JSON responses safely
-    const text = await res.text();
-
-    let data;
-    try {
-      data = JSON.parse(text);
-    } catch (e) {
-      data = { message: text };
-    }
-
-    if (!res.ok) {
-      throw new Error(data.message || "Login failed");
-    }
-
-    console.log("Login Success:", data);
-    alert("Login successful!");
-
-  })
-  .catch((err) => {
-    console.log("Error:", err);
-    alert("Login failed or network error");
-  });
-
-}
-</script>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
