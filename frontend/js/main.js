@@ -2,7 +2,7 @@
 //  SafeHer — Main JS
 // ============================
 
-const API_BASE = 'http://localhost:8000/api';
+const API_BASE = 'https://womennnnnnnnn01.onrender.com/api';
 
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
