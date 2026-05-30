@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login — SafeHer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="bg-orbs"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+  <div class="page-wrapper">
+    <div class="form-card">
+      <div style="text-align:center;margin-bottom:28px;">
+        <div style="font-size:3rem;margin-bottom:10px;">🔐</div>
+        <div class="form-title">Admin Portal</div>
+        <div class="form-subtitle">SafeHer Administration Dashboard</div>
+      </div>
+      <div id="alert-box"></div>
+      <form id="admin-login-form">
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" id="username" placeholder="admin" required autocomplete="username"/>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="password" placeholder="••••••••" required autocomplete="current-password"/>
+        </div>
+        <button type="submit" class="btn-primary btn-full">Login to Admin</button>
+      </form>
+      <div class="form-footer" style="margin-top:20px;">
+        <a href="../index.html" style="color:var(--muted);">← Back to SafeHer</a>
+      </div>
+    </div>
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

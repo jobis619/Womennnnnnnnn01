@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Report Incident — SafeHer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="bg-orbs"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo"><span class="logo-icon">⚡</span><span class="logo-text">SafeHer</span></a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="report.html" class="active">Report</a>
+      <a href="resources.html">Resources</a>
+      <a href="contacts.html">Contacts</a>
+    </div>
+    <div class="nav-actions">
+      <a href="sos.html" class="btn-sos" style="padding:9px 20px;font-size:0.85rem;">🚨 SOS</a>
+    </div>
+  </nav>
+  <div class="page-wrapper">
+    <div class="form-card wide">
+      <div class="form-title">📋 Report an Incident</div>
+      <div class="form-subtitle">Your report is confidential and will be reviewed by our safety team.</div>
+      <div id="alert-box"></div>
+      <form id="report-form">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+          <div class="form-group">
+            <label>Incident Type</label>
+            <select id="incident_type" required>
+              <option value="">Select type...</option>
+              <option value="harassment">Harassment</option>
+              <option value="stalking">Stalking</option>
+              <option value="assault">Assault</option>
+              <option value="domestic_violence">Domestic Violence</option>
+              <option value="verbal_abuse">Verbal Abuse</option>
+              <option value="cybercrime">Cybercrime / Online Abuse</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Location / Area</label>
+            <input type="text" id="location" placeholder="Where did it happen?" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Describe the Incident</label>
+          <textarea id="description" placeholder="Please describe what happened in as much detail as you are comfortable sharing..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label>When did it happen?</label>
+          <input type="datetime-local" id="incident_date" />
+        </div>
+        <button type="submit" class="btn-primary btn-full">🔒 Submit Confidential Report</button>
+      </form>
+      <div class="form-footer" style="margin-top:16px;">
+        Need immediate help? <a href="sos.html" style="color:var(--rose)">Use SOS →</a>
+      </div>
+    </div>
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

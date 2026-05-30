@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SafeHer — Women Safety Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Animated background -->
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">SafeHer</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="pages/report.html">Report</a>
+      <a href="pages/resources.html">Resources</a>
+      <a href="pages/contacts.html">Contacts</a>
+    </div>
+    <div class="nav-actions">
+      <a href="pages/login.html" class="btn-outline">Login</a>
+      <a href="pages/register.html" class="btn-primary">Get Safe</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🛡️ Your Safety, Our Priority</div>
+      <h1 class="hero-title">
+        Every Woman<br>
+        <em>Deserves</em> to Feel<br>
+        <span class="highlight">Safe.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Real-time SOS alerts, trusted contact networks, incident reporting, and community resources — all in one powerful platform.
+      </p>
+
+      <div class="hero-cta">
+        <a href="pages/sos.html" class="btn-sos pulse">🚨 SOS Emergency</a>
+        <a href="pages/register.html" class="btn-secondary">Create Account →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="section-header">
+      <h2>Built for Your Protection</h2>
+    </div>
+  </section>
+
+  <!-- Emergency Hotlines -->
+  <section class="hotlines">
+    <h2>Emergency Hotlines</h2>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2024 SafeHer</p>
+  </footer>
+
+  <!-- ✅ LOGIN SCRIPT ADDED HERE -->
+ <script>
+function loginUser() {
+
+  const email = document.getElementById("email")?.value;
+  const password = document.getElementById("password")?.value;
+
+  fetch("https://womensafety-backend.up.railway.app/api/login/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      email: email,
+      password: password
+    })
+  })
+  .then(async (res) => {
+
+    // IMPORTANT FIX: handle non-JSON responses safely
+    const text = await res.text();
+
+    let data;
+    try {
+      data = JSON.parse(text);
+    } catch (e) {
+      data = { message: text };
+    }
+
+    if (!res.ok) {
+      throw new Error(data.message || "Login failed");
+    }
+
+    console.log("Login Success:", data);
+    alert("Login successful!");
+
+  })
+  .catch((err) => {
+    console.log("Error:", err);
+    alert("Login failed or network error");
+  });
+
+}
+</script>
+
+</body>
+</html>
